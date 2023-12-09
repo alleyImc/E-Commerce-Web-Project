@@ -54,6 +54,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'code',
     link: '/page2',
   },
+  {
+    title: 'sayfa 3',
+    caption: 'chat.quasar.dev',
+    icon: 'chat',
+    link: '/page3',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
