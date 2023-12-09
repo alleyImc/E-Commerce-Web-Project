@@ -66,6 +66,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'record_voice_over',
     link: '/page4',
   },
+  {
+    title: 'sayfa 5',
+    caption: '@quasarframework',
+    icon: 'rss_feed',
+    link: '/page5',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
