@@ -60,6 +60,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'chat',
     link: '/page3',
   },
+  {
+    title: 'sayfa 4',
+    caption: 'forum.quasar.dev',
+    icon: 'record_voice_over',
+    link: '/page4',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
