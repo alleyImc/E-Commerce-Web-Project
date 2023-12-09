@@ -81,14 +81,20 @@ const componentLinks: ComponentLinkProps[] = [
   {
     title: 'sayfa 7',
     caption: 'Carousel',
-    icon: 'code',
+    icon: 'school',
     link: '/page7',
   },
   {
     title: 'sayfa 8',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
+    caption: 'Carousel',
+    icon: 'school',
     link: '/page8',
+  },
+  {
+    title: 'sayfa 9',
+    caption: 'Carousel',
+    icon: 'school',
+    link: '/page9',
   },
 ];
 
