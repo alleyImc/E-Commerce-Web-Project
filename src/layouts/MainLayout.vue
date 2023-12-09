@@ -72,6 +72,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'rss_feed',
     link: '/page5',
   },
+  {
+    title: 'sayfa 6',
+    caption: 'quasar.dev',
+    icon: 'school',
+    link: '/page6',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
