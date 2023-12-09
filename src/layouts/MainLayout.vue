@@ -8,30 +8,24 @@
           round
           icon="menu"
           aria-label="Menu"
-
+          @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-toolbar-title> Quasar App </q-toolbar-title>
 
-        <div>Quasar v\{{ $q.version }}</div>
+        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
+        <q-item-label header> Essential Links </q-item-label>
+        <component-link
+          v-for="link in componentLinks"
+          :key="link.title"
+          v-bind="link"
         >
-          Essential Links
-        </q-item-label>
-
-
+        </component-link>
       </q-list>
     </q-drawer>
 
@@ -41,103 +35,20 @@
   </q-layout>
 </template>
 
-<script{{#preset.typescript}} lang="ts">
-import EssentialLink from 'components/EssentialLink.vue'
+<script setup lang="ts">
+import { ref } from 'vue';
+import ComponentLink, {
+  ComponentLinkProps,
+} from 'components/ComponentLink.vue';
 
-const linksList = [
+const componentLinks: ComponentLinkProps[] = [
   {
-    title: 'Docs',
+    title: 'Ana Sayfa',
     caption: 'quasar.dev',
     icon: 'school',
-    link: 'https://quasar.dev'
+    link: '/',
   },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ];
-
-{{#if_eq typescriptConfig "class"}}import { Vue, Options } from 'vue-class-component'
-
-@Options({
-  components: { EssentialLink }
-})
-export default class MainLayout extends Vue {
-  leftDrawerOpen = false;
-  essentialLinks = linksList;
-  toggleLeftDrawer () {
-    this.leftDrawerOpen = !this.leftDrawerOpen
-  }
-}
-{{else}}
-import { defineComponent{{#unless_eq typescriptConfig "options"}}, ref{{/unless_eq}} } from 'vue'
-
-export default defineComponent({
-  name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  {{#if_eq typescriptConfig "options"}}data() {
-    return {
-      leftDrawerOpen: false,
-      essentialLinks: linksList
-    }
-  },
-
-  methods: {
-    toggleLeftDrawer () {
-      this.leftDrawerOpen = !this.leftDrawerOpen
-    }
-  }
-  {{else}}setup () {
-    const leftDrawerOpen = ref(false)
-
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-  {{/if_eq}}
-})
-{{/if_eq}}
-</script>
 
 const leftDrawerOpen = ref(false);
 
