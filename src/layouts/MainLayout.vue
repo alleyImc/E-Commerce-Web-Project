@@ -48,6 +48,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'school',
     link: '/',
   },
+  {
+    title: 'Sayfa 2',
+    caption: 'github.com/quasarframework',
+    icon: 'code',
+    link: '/page2',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
