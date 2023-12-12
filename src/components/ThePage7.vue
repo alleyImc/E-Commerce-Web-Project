@@ -48,12 +48,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
-const slide = ref(1);
-
-const tab = 'tab1';
-
 interface RowLink {
   [key: string]: string;
 }
