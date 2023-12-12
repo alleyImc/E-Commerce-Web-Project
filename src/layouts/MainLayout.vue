@@ -96,6 +96,12 @@ const componentLinks: ComponentLinkProps[] = [
     icon: 'school',
     link: '/page9',
   },
+  {
+    title: 'sayfa 10',
+    caption: 'Carousel',
+    icon: 'school',
+    link: '/page10',
+  },
 ];
 
 const leftDrawerOpen = ref(false);
