@@ -5,17 +5,37 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') },
-      { path: 'page1', component: () => import('components/ThePage2.vue') },
-      { path: 'page2', component: () => import('components/ThePage2.vue') },
-      { path: 'page3', component: () => import('components/ThePage3.vue') },
-      { path: 'page4', component: () => import('components/ThePage4.vue') },
-      { path: 'page5', component: () => import('components/ThePage5.vue') },
-      { path: 'page6', component: () => import('components/ThePage6.vue') },
-      { path: 'page7', component: () => import('components/ThePage7.vue') },
-      { path: 'page8', component: () => import('components/ThePage8.vue') },
-      { path: 'page9', component: () => import('components/ThePage9.vue') },
-      { path: 'page10', component: () => import('components/ThePage10.vue') },
+      {
+        path: 'compHeader1',
+        component: () => import('components/compHeader1.vue'),
+      },
+      {
+        path: 'compHeader2',
+        component: () => import('components/compHeader2.vue'),
+      },
+      { path: 'compSign', component: () => import('components/compSign.vue') },
+      {
+        path: 'compCampaign',
+        component: () => import('components/compCampaign.vue'),
+      },
+      {
+        path: 'compHediye',
+        component: () => import('components/compHediye.vue'),
+      },
+      {
+        path: 'compCarousel',
+        component: () => import('components/compCarousel.vue'),
+      },
+      {
+        path: 'compPhoto',
+        component: () => import('components/compPhoto.vue'),
+      },
+      { path: 'compCard', component: () => import('components/compCard.vue') },
+      {
+        path: 'compFooter',
+        component: () => import('components/compFooter.vue'),
+      },
+      { path: 'compLeft', component: () => import('components/compLeft.vue') },
     ],
   },
 
