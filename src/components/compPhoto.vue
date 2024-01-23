@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar">
+  <div class="toolbar" style="margin-bottom: 20px; border-radius: 5px">
     <q-toolbar>
       <div class="label-container">
         <q-btn flat @click="goToLink0('link')">
@@ -16,16 +16,19 @@
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/Destek-yayinlari-secili-felsefe-biyografi-kitaplarinda-ozel-fiyatlar_398x195.jpg"
       alt="Image 1"
       @click="goToLink('image1')"
+      style="border-radius: 5px"
     />
     <q-img
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/Turkuvaz-1-Alana-1-Bedava-Kampanyasi-398x195.jpg"
       alt="Image 2"
       @click="goToLink('image2')"
+      style="border-radius: 5px"
     />
     <q-img
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/fddfdfsds3lu_398x195-3-.jpg"
       alt="Image 3"
       @click="goToLink('image3')"
+      style="border-radius: 5px"
     />
   </div>
   <div class="image-container-alt">
@@ -33,16 +36,19 @@
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/lego-eylul-revizeli-3lu_398x195.webp"
       alt="Image 4"
       @click="goToLink('image4')"
+      style="border-radius: 5px"
     />
     <q-img
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/prestij-kalem-3lu_banner_398x195.jpg"
       alt="Image 5"
       @click="goToLink('image5')"
+      style="border-radius: 5px"
     />
     <q-img
       src="https://i.dr.com.tr/pimages/Content/Uploads/BannerFiles/dr/vatka-dr-aralik-398x195.webp"
       alt="Image 6"
       @click="goToLink('image6')"
+      style="border-radius: 5px"
     />
   </div>
 </template>
@@ -79,8 +85,9 @@ const goToLink = (imageKey: string) => {
 .toolbar {
   background-color: #fa0000;
   color: #ffffff;
-  font-size: 16px;
-  padding: 5px 25px 5px 10px;
+  font-size: 14px;
+  height: 50px;
+  padding: 5px 10px 5px 10px;
   display: flex;
   justify-content: center;
   align-items: center;

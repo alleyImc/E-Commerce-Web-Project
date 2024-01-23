@@ -2,10 +2,18 @@
   <q-page style="background-color: white">
     <comp-header1></comp-header1>
     <comp-header2></comp-header2>
-    <comp-carousel></comp-carousel>
-    <comp-photo></comp-photo>
-    <comp-card></comp-card>
-    <comp-photo></comp-photo>
+    <div style="margin-left: 135px; margin-right: 135px">
+      <comp-carousel></comp-carousel>
+    </div>
+    <div style="margin-left: 150px; margin-right: 150px">
+      <comp-photo></comp-photo>
+    </div>
+    <div style="margin-left: 135px; margin-right: 135px">
+      <comp-card></comp-card>
+    </div>
+    <div style="margin-left: 150px; margin-right: 150px">
+      <comp-photo></comp-photo>
+    </div>
     <comp-footer></comp-footer>
   </q-page>
 </template>
@@ -18,3 +26,5 @@ import CompHeader2 from 'src/components/compHeader2.vue';
 import CompPhoto from 'src/components/compPhoto.vue';
 import compCard from 'src/components/compCard.vue';
 </script>
+
+<style></style>

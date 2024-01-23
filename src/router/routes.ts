@@ -6,11 +6,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: 'IndexPage', component: () => import('pages/IndexPage.vue') },
-
-      {
-        path: 'KampanyaPage',
-        component: () => import('pages/KampanyaPage.vue'),
-      } /*
+      /*
       {
         path: 'compHeader1',
         component: () => import('components/compHeader1.vue'),
@@ -41,7 +37,7 @@ const routes: RouteRecordRaw[] = [
         path: 'compFooter',
         component: () => import('components/compFooter.vue'),
       },
-      { path: 'compLeft', component: () => import('components/compLeft.vue') },*/,
+      { path: 'compLeft', component: () => import('components/compLeft.vue') },*/
     ],
   },
   {
