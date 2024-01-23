@@ -68,6 +68,10 @@ const routes: RouteRecordRaw[] = [
         path: '',
         component: () => import('pages/SignPage.vue'),
       },
+      {
+        path: '/register/',
+        component: () => import('pages/RegisterPage.vue'),
+      },
     ],
   },
   {

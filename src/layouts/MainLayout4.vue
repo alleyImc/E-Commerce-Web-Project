@@ -49,6 +49,12 @@ const EssentialLinks: ComponentLinkProps[] = [
     link: '',
   },
   {
+    title: 'üye ol ilk kez',
+    caption: 'compRegister kullanır',
+    icon: 'school',
+    link: '/register/',
+  },
+  {
     title: 'Ana sayfa',
     caption: 'Asıl sayfa',
     icon: 'school',

@@ -82,11 +82,13 @@
               </q-item-section>
             </q-item>
           </router-link>
-          <q-item clickable v-close-popup>
-            <q-item-section>
-              <q-item-label>Üye Ol</q-item-label>
-            </q-item-section>
-          </q-item>
+          <router-link to="/register/">
+            <q-item clickable v-close-popup>
+              <q-item-section>
+                <q-item-label>Üye Ol</q-item-label>
+              </q-item-section>
+            </q-item>
+          </router-link>
         </q-btn-dropdown>
 
         <q-btn
