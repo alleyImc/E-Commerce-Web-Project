@@ -20,12 +20,12 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
         <q-item-label header> Essential Links </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
+        <component-link
+          v-for="link in EssentialLinks"
           :key="link.title"
           v-bind="link"
-        />
+        >
+        </component-link>
       </q-list>
     </q-drawer>
 
@@ -37,52 +37,22 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import EssentialLink, {
-  EssentialLinkProps,
-} from 'components/EssentialLink.vue';
+import ComponentLink, {
+  ComponentLinkProps,
+} from 'components/ComponentLink.vue';
 
-const essentialLinks: EssentialLinkProps[] = [
+const EssentialLinks: ComponentLinkProps[] = [
   {
-    title: 'Docs 2',
-    caption: 'quasar.dev',
+    title: 'Kampanya Sayfası',
+    caption: 'KAmpanya Sayfası',
     icon: 'school',
-    link: 'https://quasar.dev',
+    link: '',
   },
   {
-    title: 'Github 2',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: 'Forum 2',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
-  },
-  {
-    title: 'Twitter 2',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook 2',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome 2',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
+    title: 'Ana sayfa',
+    caption: 'Asıl sayfa',
+    icon: 'school',
+    link: '/IndexPage',
   },
 ];
 

@@ -31,10 +31,15 @@
             </div>
             <div
               v-for="item in section.items"
-              :key="item"
+              :key="String(item)"
               style="margin-left: 15px"
             >
-              {{ item }}
+              <router-link v-if="typeof item === 'object'" :to="item.link">
+                {{ item.label }}
+              </router-link>
+              <div v-else>
+                {{ item }}
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +53,11 @@ import { ref, Ref } from 'vue';
 
 interface Category {
   label: string;
-  sections: { items?: string[]; image?: string; images?: string[] }[];
+  sections: {
+    items?: ({ label: string; link: string } | string)[];
+    image?: string;
+    images?: string[];
+  }[];
 }
 
 const categories: Ref<Category[]> = ref<Category[]>([
@@ -110,19 +119,36 @@ const categories: Ref<Category[]> = ref<Category[]>([
   {
     label: 'Ders Kitapları',
     sections: [
-      { items: ['Ders Kitap 1', 'Ders Kitap 1', '...'] },
-      { items: ['Ders Kitap 2', 'Ders Kitap 2', '...'] },
-      { items: ['Ders Kitap 3', 'Ders Kitap 3', '...'] },
-      { items: ['Ders Kitap 4', 'Ders Kitap 4', '...'] },
+      {
+        items: [
+          { label: 'Üniversiteye Hazırlık', link: '/Left/' },
+          { label: 'Ders Kitap 1', link: '/DersKitap1/' },
+          { label: 'Ders Kitap 2', link: '/DersKitap2/' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Ders Kitap 3', link: '/DersKitap3/' },
+          { label: 'Ders Kitap 4', link: '/DersKitap4/' },
+        ],
+      },
     ],
   },
   {
     label: 'Elektronik',
     sections: [
-      { items: ['Elektronik 1', 'Elektronik 1', '...'] },
-      { items: ['Elektronik 2', 'Elektronik 2', '...'] },
-      { items: ['Elektronik 3', 'Elektronik 3', '...'] },
-      { items: ['Elektronik 4', 'Elektronik 4', '...'] },
+      {
+        items: [
+          { label: 'Elektronik 1', link: '/Elektronik1/' },
+          { label: 'Elektronik 2', link: '/Elektronik2/' },
+        ],
+      },
+      {
+        items: [
+          { label: 'Elektronik 3', link: '/Elektronik3/' },
+          { label: 'Elektronik 4', link: '/Elektronik4/' },
+        ],
+      },
     ],
   },
   {

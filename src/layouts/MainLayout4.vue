@@ -43,71 +43,17 @@ import ComponentLink, {
 
 const EssentialLinks: ComponentLinkProps[] = [
   {
-    title: 'main Page',
+    title: 'giriş yap sayfası',
+    caption: 'compsign kullanır',
+    icon: 'school',
+    link: '',
+  },
+  {
+    title: 'Ana sayfa',
     caption: 'Asıl sayfa',
     icon: 'school',
     link: '/IndexPage',
-  } /*
-  {
-    title: 'comp1',
-    caption: 'Ana header',
-    icon: 'school',
-    link: '/compHeader1',
   },
-  {
-    title: 'comp2',
-    caption: 'header dropdown',
-    icon: 'code',
-    link: '/compHeader2',
-  },
-  {
-    title: 'comp3',
-    caption: 'Kullanıcı giriş yap sayfası',
-    icon: 'chat',
-    link: '/compSign',
-  },
-  {
-    title: 'comp4',
-    caption: 'kampanyalar',
-    icon: 'record_voice_over',
-    link: '/compCampaign',
-  },
-  {
-    title: 'comp5',
-    caption: 'hediye kartı seçilir',
-    icon: 'rss_feed',
-    link: '/compHediye',
-  },
-  {
-    title: 'comp6',
-    caption: 'Carousel',
-    icon: 'school',
-    link: '/compCarousel',
-  },
-  {
-    title: 'comp7',
-    caption: 'fotoğraf kolajı',
-    icon: 'school',
-    link: '/compPhoto',
-  },
-  {
-    title: 'comp8',
-    caption: 'Ürün q-cardları',
-    icon: 'school',
-    link: '/compCard',
-  },
-  {
-    title: 'comp9',
-    caption: 'footer',
-    icon: 'school',
-    link: '/compFooter',
-  },
-  {
-    title: 'comp10',
-    caption: 'left seçim component',
-    icon: 'school',
-    link: '/compLeft',
-  },*/,
 ];
 
 const leftDrawerOpen = ref(false);

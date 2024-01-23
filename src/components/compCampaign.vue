@@ -1,6 +1,6 @@
 <template>
   <q-page class="campaign-page-frame mt-20">
-    <div class="campaign-header text-center" style="margin-top: 70px">
+    <div class="campaign-header text-center" style="margin-top: 20px">
       <h1 class="baslik">
         <span id="campaignTitleName">D&R Güncel Kampanyalar</span>
       </h1>
