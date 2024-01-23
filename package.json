@@ -1,9 +1,9 @@
 {
-  "name": "huseyinquasar",
+  "name": "aleyquasar",
   "version": "0.0.1",
   "description": "A Quasar Project",
   "productName": "Quasar App",
-  "author": "huseyinsavran <huseyinsavran2006@gmail.com>",
+  "author": "aley.İmc",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
